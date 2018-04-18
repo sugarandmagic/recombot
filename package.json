@@ -1,0 +1,19 @@
+{
+  "name": "recombot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sugarandmagic/recombot.git"
+  },
+  "author": "Carrie Beesley <carrie@carriebeesley.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sugarandmagic/recombot/issues"
+  },
+  "homepage": "https://github.com/sugarandmagic/recombot#readme"
+}
