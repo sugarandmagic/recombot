@@ -5,6 +5,6 @@ services:
     volumes:
       - /opt/recombot:/opt/recombot
     working_dir: /opt/recombot
-    command: npm install && npm run compile && npm start
+    command: npm start
     environment:
       - TOKEN=${token}
