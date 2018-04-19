@@ -3,7 +3,7 @@
 Recombot is a Slack bot that facilitates standups.
 
 ## User Guide
-Users must join #standup, and then in the morning they will be prompted to respond in the bot channel with their answers to the questions. If they don't respond, they will be prompted. At the designated time, all the answers will be collated and posted in #standup if they are from that morning.
+Users join #standup, and then in the morning they will be prompted to respond in the bot channel with their answers to the questions. If they don't respond, they will be reminded. At the designated time, all the answers from this 30 minute period will be collated and posted in #standup.
 
 ## Technical Details
 
