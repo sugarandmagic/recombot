@@ -5,6 +5,7 @@ services:
     volumes:
       - /opt/rcbx:/opt/recombot
     working_dir: /opt/recombot
-    command: yarn watch-server
-    ports:
-      - "3000:3000"
+    command: npm install && npm run compile && npm start
+web:
+  environment:
+    - TOKEN=${token}
