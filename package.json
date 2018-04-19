@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch-server": "NODE_ENV=development nodemon --watch 'app.js'",
-    "start": "node ./dist/server/index.js",
+    "start": "node ./dist/index.js",
     "clean": "rm -rf dist",
-    "compile": "BABEL_ENV=production babel index.js --out-dir dist --copy-files --source-maps --extensions \".js\" --ignore \"src/test/**\"",
+    "compile": "BABEL_ENV=production babel \"*.js\" --out-dir dist --copy-files --source-maps --extensions \".js\" --ignore \"src/test/**\"",
     "lint": "eslint src/**",
     "mocha": "BABEL_ENV=test nyc mocha --require ./src/test/index.js 'src/test/unit/**/*.js'",
     "flow": "flow",
