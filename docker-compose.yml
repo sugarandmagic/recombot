@@ -6,6 +6,5 @@ services:
       - /opt/recombot:/opt/recombot
     working_dir: /opt/recombot
     command: npm install && npm run compile && npm start
-web:
-  environment:
-    - TOKEN=${token}
+    environment:
+      - TOKEN=${token}
