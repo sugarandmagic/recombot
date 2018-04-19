@@ -24,10 +24,9 @@ const writeUserData = (responseData) => {
     });
 };
 
-const token = 'xoxb-346385745456-51bdl8u0hxqhApoLxn4TDrdl'
 const morningMessage = 'Good Morning! 🌅\rIt is almost time for our daily standup 😝\rPlease answer the following three questions:\r1. What did you get done yesterday❓\r2. What will you get done today❓\r3. How can the team help you❓';
-const web = new WebClient(token);
-const rtm = new RTMClient(token);
+const web = new WebClient(process.env.TOKEN);
+const rtm = new RTMClient(process.env.TOKEN);
 rtm.start();
 
 // Get the id for the standup channel
@@ -194,14 +193,14 @@ const getAllResponses = async () => {
     return responseText
 };
 
-cron.schedule('55 22 * * *', async () => {
+cron.schedule('30 9 * * *', async () => {
     await sendMessageToAll(morningMessage);
 });
 
-cron.schedule('56 22 * * *', async () => {
+cron.schedule('50 9 * * *', async () => {
     await remindUsers()
 });
 
-cron.schedule('57 22 * * *', async () => {
+cron.schedule('0 10 * * *', async () => {
     await postAllAnswers();
 });
