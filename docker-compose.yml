@@ -3,7 +3,7 @@ services:
   node:
     image: node:8
     volumes:
-      - /opt/rcbx:/opt/recombot
+      - /opt/recombot:/opt/recombot
     working_dir: /opt/recombot
     command: npm install && npm run compile && npm start
 web:
