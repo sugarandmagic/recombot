@@ -16,7 +16,7 @@ let standupChannel;
 
 firebase.initializeApp(config);
 
-//
+// write data to Firebase
 const writeUserData = (responseData) => {
     firebase.database().ref('responses/' + [responseData.user]).set({
         text: responseData.text,
