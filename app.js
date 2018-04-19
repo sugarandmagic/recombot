@@ -11,10 +11,9 @@ const config = {
     storageBucket: "ecombot-dd65e.appspot.com",
     messagingSenderId: "480552142043"
 };
+firebase.initializeApp(config);
 
 let standupChannel;
-
-firebase.initializeApp(config);
 
 // write data to Firebase
 const writeUserData = (responseData) => {
