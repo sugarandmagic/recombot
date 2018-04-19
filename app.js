@@ -3,6 +3,7 @@ import cron from'node-cron';
 import firebase from 'firebase';
 
 // Initialize Firebase
+//TODO: take the Firebase API key out and making it an env var
 const config = {
     apiKey: "AIzaSyDkikJmnksmpS8QWTjqoxBsHmW9_gxfjGs",
     authDomain: "ecombot-dd65e.firebaseapp.com",
@@ -29,6 +30,7 @@ const rtm = new RTMClient(process.env.TOKEN);
 rtm.start();
 
 // Get the id for the standup channel
+//TODO: use a proper logger
 const getChannelConversationId = async () => {
     try {
         const channelsList = await web.channels.list();
@@ -99,6 +101,7 @@ rtm.on('message', (event) => {
         team
     };
     //store responseData in firebase
+    //TODO: Don't hardcode this specific bot's ID
     if (
         (user !== 'UA6BBMXDE') &&
         channel.startsWith('DA') &&
