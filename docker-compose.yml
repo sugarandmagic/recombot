@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node:
+    image: node:8
+    volumes:
+      - /opt/rcbx:/opt/recombot
+    working_dir: /opt/recombot
+    command: yarn watch-server
+    ports:
+      - "3000:3000"
