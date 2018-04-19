@@ -5,6 +5,9 @@ Recombot is a Slack bot that facilitates standups.
 ## User Guide
 Users join #standup, and then in the morning they will be prompted to respond in the bot channel with their answers to the questions. If they don't respond, they will be reminded. At the designated time, all the answers from this 30 minute period will be collated and posted in #standup.
 
+## Running Locally
+The application can be run in developmet mode with nodemon by installing and running `token=xxxx npm run watch-server`. Production mode is started with `npm run compile && npm start` 
+
 ## Technical Details
 
 Recombot is built with node.js in ES6 using the official Slack client (https://www.npmjs.com/package/@slack/client).
