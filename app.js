@@ -207,14 +207,14 @@ const getAllResponses = async () => {
 //     await postAllAnswers();
 // });
 
-cron.schedule('40 21 * * *', async () => {
+cron.schedule('50 20 * * *', async () => {
     await sendMessageToAll(morningMessage);
 });
 
-cron.schedule('41 21 * * *', async () => {
+cron.schedule('49 20 * * *', async () => {
     await remindUsers()
 });
 
-cron.schedule('42 21 * * *', async () => {
+cron.schedule('48 20 * * *', async () => {
     await postAllAnswers();
 });
