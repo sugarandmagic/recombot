@@ -195,26 +195,28 @@ const getAllResponses = async () => {
     return responseText
 };
 
-// cron.schedule('30 9 * * *', async () => {
+//server time is UTC
+
+// cron.schedule('30 7 * * *', async () => {
 //     await sendMessageToAll(morningMessage);
 // });
 //
-// cron.schedule('50 9 * * *', async () => {
+// cron.schedule('50 7 * * *', async () => {
 //     await remindUsers()
 // });
 //
-// cron.schedule('0 10 * * *', async () => {
+// cron.schedule('0 8 * * *', async () => {
 //     await postAllAnswers();
 // });
 
-cron.schedule('50 20 * * *', async () => {
+cron.schedule('0 20 * * *', async () => {
     await sendMessageToAll(morningMessage);
 });
 
-cron.schedule('49 20 * * *', async () => {
+cron.schedule('1 20 * * *', async () => {
     await remindUsers()
 });
 
-cron.schedule('48 20 * * *', async () => {
+cron.schedule('2 20 * * *', async () => {
     await postAllAnswers();
 });
